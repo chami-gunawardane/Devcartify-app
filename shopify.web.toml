@@ -1,7 +1,13 @@
-name = "React Router"
-roles = ["frontend", "backend"]
-webhooks_path = "/webhooks/app/uninstalled"
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+type = "backend"
+roles = ["main"]
 
 [commands]
-predev = "npx prisma generate"
-dev = "npx prisma migrate deploy && npm exec react-router dev"
+dev = "npm run dev"
+build = "npm run build"
+start = "npm run start"
+
+[hmr]
+pubsub_port = 8023
+pubsub_host = "localhost"
